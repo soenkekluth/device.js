@@ -1,4 +1,6 @@
 device.js
 =========
 
-client side device / useragent detection for easier adaptive development / design
+client and server side device / useragent detection for easier adaptive development / design
+
+inspired & mostly copied from https://github.com/matthewhudson/device.js

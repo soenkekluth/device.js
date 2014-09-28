@@ -1,0 +1,27 @@
+{
+  "name": "device.js",
+  "version": "0.0.1",
+  "description": "client and server side device / useragent detection for easier adaptive development / design",
+  "main": "device.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/soenkekluth/device.js.git"
+  },
+  "keywords": [
+    "device",
+    "browser",
+    "server",
+    "useragent",
+    "ua",
+    "detection"
+  ],
+  "author": "Sönke Kluth <soenke.kluth@gmail.com> (http://soenkekluth.com/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/soenkekluth/device.js/issues"
+  },
+  "homepage": "https://github.com/soenkekluth/device.js"
+}
