@@ -2,13 +2,12 @@
 
   'use strict';
 
-  var device = function(userAgent, docElement) {
+  var device = function(userAgent, classContainer) {
 
     var device = {};
 
-    docElement = docElement || window.document.documentElement;
-    userAgent = userAgent || window.navigator.userAgent.toLowerCase();
-
+    docElement = classContainer || window.document.documentElement;
+    userAgent = (userAgent || window.navigator.userAgent).toLowerCase();
 
     function find(needle) {
       return userAgent.indexOf(needle) !== -1;
