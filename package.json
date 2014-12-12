@@ -1,6 +1,6 @@
 {
   "name": "device.js",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "client and server side device / useragent detection for easier adaptive development / design",
   "main": "device.js",
   "scripts": {

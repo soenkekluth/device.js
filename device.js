@@ -31,6 +31,11 @@
       }
     }
 
+    function getFirstMatch(regex) {
+      var match = ua.match(regex);
+      return (match && match.length > 1 && match[1]) || '';
+    }
+
     device.ios = function() {
       return device.iphone() || device.ipod() || device.ipad();
     };
@@ -105,6 +110,10 @@
 
     device.nodeWebkit = function() {
       return typeof window.process === 'object';
+    };
+
+    device.bada = function() {
+      return find('bada');
     };
 
     device.mobile = function() {
@@ -189,6 +198,33 @@
         addClass('standalone');
       }
     };
+
+
+    // OS version extraction
+    var osVersion = '';
+    if (device.ios()) {
+      osVersion = getFirstMatch(/os (\d+([_\s]\d+)*) like mac os x/i);
+      osVersion = osVersion.replace(/[_\s]/g, '.');
+    } else if (device.android()) {
+      osVersion = getFirstMatch(/android[ \/-](\d+(\.\d+)*)/i);
+    } else if (device.windowsPhone()) {
+      osVersion = getFirstMatch(/windows phone (?:os)?\s?(\d+(\.\d+)*)/i);
+    }
+    /*else if (device.webos()) {
+          osVersion = getFirstMatch(/(?:web|hpw)os\/(\d+(\.\d+)*)/i); }*/
+    else if (device.blackberry()) {
+      osVersion = getFirstMatch(/rim\stablet\sos\s(\d+(\.\d+)*)/i);
+    } else if (device.bada()) {
+      osVersion = getFirstMatch(/bada\/(\d+(\.\d+)*)/i);
+    }
+    /*else if (result.tizen) {
+          osVersion = getFirstMatch(/tizen[\/\s](\d+(\.\d+)*)/i);
+        }*/
+
+    if (osVersion) {
+      device.osversion = osVersion;
+    }
+
 
 
 
