@@ -32,7 +32,7 @@
     }
 
     function getFirstMatch(regex) {
-      var match = ua.match(regex);
+      var match = userAgent.match(regex);
       return (match && match.length > 1 && match[1]) || '';
     }
 
