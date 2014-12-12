@@ -6,7 +6,7 @@
 
     var device = {};
 
-    docElement = classContainer || window.document.documentElement;
+    var docElement = classContainer || window.document.documentElement;
     userAgent = (userAgent || window.navigator.userAgent).toLowerCase();
 
     function find(needle) {
