@@ -31,6 +31,12 @@
   "bugs": {
     "url": "https://github.com/soenkekluth/device.js/issues"
   },
+  "files": [
+    "browser",
+    "lib",
+    "src",
+    "es"
+  ],
   "homepage": "https://github.com/soenkekluth/device.js",
   "devDependencies": {
     "babel-plugin-external-helpers": "^6.22.0",
