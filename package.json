@@ -5,7 +5,7 @@
   "description": "client and server side device / useragent detection for easier adaptive development / design",
   "module": "es/device.js",
   "jsnext:main": "es/device.js",
-  "browser": "browser/device.js",
+  "browser": "dist/device.js",
   "main": "lib/device.js",
   "scripts": {
     "build": "run-s build:es build:umd build:browser",
