@@ -46,7 +46,7 @@ const device2 = new Device(ua2);
 
 ```
 
-#### device getters
+### Getters
 
 ```
 deviceorientation
