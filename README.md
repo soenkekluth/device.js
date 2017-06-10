@@ -11,8 +11,9 @@ supports React server side rendering.
 
 # Usage
 
-```javascript
+### Browser
 
+```javascript
 import { device } from 'device.js';
 
 // add specific classes like "mobile" "ios" "android" "desktop" to the html element.
@@ -25,6 +26,23 @@ if (device.mobile){
   // do tablet && desktop stuff
 }
 
+```
+
+### Node
+
+```javascript
+// 1
+import { device } from 'device.js';
+
+device.setUserAgent(ua);
+
+////////////////////////
+
+// 2
+import Device from 'device.js';
+
+const device = new Device(ua1);
+const device2 = new Device(ua2);
 
 ```
 
