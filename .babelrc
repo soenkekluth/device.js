@@ -1,13 +1,34 @@
 {
   "presets": [
     [
-      "es2015",
-      {
-        "modules": false
+      "es2015", {
+        "modules": false,
+        "loose": true
       }
     ]
   ],
   "plugins": [
     "external-helpers"
-  ]
+  ],
+  "env": {
+    "test": {
+      "plugins": ["istanbul"]
+    },
+    "commonjs": {
+      "plugins": [
+        ["transform-es2015-modules-commonjs", { "loose": true }]
+      ]
+    },
+    "es": {
+      "plugins": [
+        "./build/use-lodash-es"
+      ]
+    },
+    "rollup": {
+      "plugins": [
+        "./build/use-lodash-es",
+        "external-helpers"
+      ]
+    }
+  }
 }
