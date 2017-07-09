@@ -306,10 +306,20 @@ class Device {
     return this.matchCache['ie9'] || false;
   }
 
+  get touchDevice() {
+    if (!this.matchCache['touchDevice']) {
+      if (typeof document !== 'undefined') {
+        this.matchCache['touchDevice'] = !!(navigator && navigator.userAgent) && navigator.userAgent.match(/(iPhone|iPod|iPad|Android|playbook|silk|BlackBerry|BB10|Windows Phone|Tizen|Bada|webOS|IEMobile|Opera Mini)/);
+      }
+    }
+    return this.matchCache['touchDevice'] || false;
+  }
+
+
   get touch() {
     if (!this.matchCache['touch']) {
       if (typeof document !== 'undefined') {
-        this.matchCache['touch'] = (('ontouchstart' in window) || window.DocumentTouch && document instanceof DocumentTouch);
+        this.matchCache['touch'] = (('ontouchstart' in window) ||( window.DocumentTouch && document instanceof DocumentTouch) || (navigator && navigator.msMaxTouchPoints > 0) || (navigator && navigator.maxTouchPoints));
       }
     }
     return this.matchCache['touch'] || false;
@@ -478,6 +488,5 @@ class Device {
     return false;
   }
 }
-
 export const device = new Device();
 export default Device;

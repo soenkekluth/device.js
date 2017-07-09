@@ -1,13 +1,14 @@
 {
+  "parser": "babel-eslint",
+  "extends": "eslint:recommended",
   "env": {
     "node": true,
     "browser": true,
     "es6": true
   },
   "globals": {
-    "ENV": true
+    "expect": true
   },
-  "extends": "eslint:recommended",
   "parserOptions": {
     "sourceType": "module"
   },
@@ -16,6 +17,10 @@
       "error",
       2
     ],
+    "semi": [
+      2,
+      "always"
+    ],
     "linebreak-style": [
       "error",
       "unix"
@@ -23,10 +28,6 @@
     "quotes": [
       "error",
       "single"
-    ],
-    "semi": [
-      "error",
-      "always"
     ]
   }
 }
