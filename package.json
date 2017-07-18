@@ -1,6 +1,6 @@
 {
   "name": "device.js",
-  "version": "2.2.0",
+  "version": "2.3.0",
   "description": "client and server side device / useragent detection for easier adaptive development / design",
   "moduleName": "device",
   "jsnext:main": "dist/device.es.js",
@@ -42,9 +42,7 @@
   },
   "files": [
     "dist",
-    "lib",
-    "src",
-    "es"
+    "src"
   ],
   "homepage": "https://github.com/soenkekluth/device.js",
   "devDependencies": {
@@ -77,6 +75,7 @@
     "strip-json-comments-cli": "^1.0.1"
   },
   "dependencies": {
+    "dom-helpers": "^3.2.1",
     "lodash": "^4.17.4",
     "lodash-es": "^4.17.4",
     "uglify-js": "^2.8.29"

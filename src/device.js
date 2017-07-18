@@ -1,3 +1,4 @@
+import { addClass, removeClass, hasClass } from 'dom-helpers/class';
 import throttle from 'lodash/throttle';
 
 let documentTimeout = null;
@@ -48,27 +49,27 @@ const isIE = (v) => {
 // };
 
 // Check if documentElement already has a given class.
-const hasClass = (domNode, className) => {
-  let regex;
-  regex = new RegExp(className, 'i');
-  return domNode.className.match(regex);
-};
+// const hasClass = (domNode, className) => {
+//   let regex;
+//   regex = new RegExp(className, 'i');
+//   return domNode.className.match(regex);
+// };
 
-// Add one or more CSS classes to the <html> element.
-const addClass = (domNode, className) => {
-  let currentClassNames = null;
-  if (!hasClass(domNode, className)) {
-    currentClassNames = domNode.className.replace(/^\s+|\s+$/g, '');
-    domNode.className = currentClassNames + ' ' + className;
-  }
-};
+// // Add one or more CSS classes to the <html> element.
+// const addClass = (domNode, className) => {
+//   let currentClassNames = null;
+//   if (!hasClass(domNode, className)) {
+//     currentClassNames = domNode.className.replace(/^\s+|\s+$/g, '');
+//     domNode.className = currentClassNames + ' ' + className;
+//   }
+// };
 
-// Remove single CSS class from the <html> element.
-const removeClass = (domNode, className) => {
-  if (hasClass(domNode, className)) {
-    domNode.className = domNode.className.replace(' ' + className, '');
-  }
-};
+// // Remove single CSS class from the <html> element.
+// const removeClass = (domNode, className) => {
+//   if (hasClass(domNode, className)) {
+//     domNode.className = domNode.className.replace(' ' + className, '');
+//   }
+// };
 
 let staticDevice = null;
 
