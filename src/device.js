@@ -273,7 +273,9 @@ class Device {
       return;
     }
     this.state.addedClasses = true;
-    this.targetNode.className += this.getClasses();
+
+    const delimiter = (this.targetNode.className) ? ' ' : '';
+    this.targetNode.className += delimiter + this.getClasses();
   }
 
   get features() {
