@@ -1,6 +1,8 @@
 device.js
 =========
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/soenkekluth/device.js.svg)](https://greenkeeper.io/)
+
 client and server side device / useragent detection for easier adaptive development / design
 
 inspired & partly copied from https://github.com/matthewhudson/device.js but much more performand and flexible.
